@@ -3,7 +3,6 @@ const express = require('express'),
     bodyParser = require('body-parser'),
     _ = require("lodash"),
     sm = require("sitemap"),
-    cloudinary = require("cloudinary"),
     errorhandler = require('errorhandler'),
     
     helpers = require(__dirname + '/helpers.js'),

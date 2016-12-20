@@ -1,6 +1,4 @@
 module.exports = function (p, productImagesUrl, resizeProductImage) {
-    let cloudinary = require("cloudinary");
-
     this.condition = (condition) => {
         return p.t(`global.productCondition.${condition}`);
     }
