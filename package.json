@@ -1,11 +1,11 @@
 {
   "name": "all4sale",
   "version": "0.0.1",
-  "description": "",
+  "description": "All4Sale is a simple NodeJS e-commerce website for people promoting garage sale or wanting to make some extra money",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon"
+    "start": "node index.js"
   },
   "engines": {
     "node": "6.2.2"
@@ -15,7 +15,7 @@
     "url": "git+ssh://git@bitbucket.org/tucaz/all4sale.git"
   },
   "author": "tucaz",
-  "license": "ISC",
+  "license": "MIT",
   "homepage": "https://github.com/tucaz/all4sale/blob/master/README.md",
   "dependencies": {
     "async": "^2.0.0-rc.5",
