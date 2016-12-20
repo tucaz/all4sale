@@ -11,7 +11,7 @@ This is a simple NodeJS application to help you promote garage sale online and s
 ## Getting Started
 
 ```sh
-git clone https://github.com/tucaz/garage-sale.git
+git clone https://github.com/tucaz/all4sale.git
 npm install
 node index.js
 ```

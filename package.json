@@ -16,7 +16,7 @@
   },
   "author": "tucaz",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/tucaz/all4sale#readme",
+  "homepage": "https://github.com/tucaz/all4sale/blob/master/README.md",
   "dependencies": {
     "async": "^2.0.0-rc.5",
     "body-parser": "^1.15.1",
