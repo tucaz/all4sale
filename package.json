@@ -30,7 +30,7 @@
     "pug": "^2.0.0-beta3",
     "sharp": "^0.16.2",
     "sitemap": "^1.8.1",
-    "errorhandler": "^1.5.0",
+    "errorhandler": "^1.5.0"
   },
   "devDependencies": {
     "nodemon": "^1.9.2"
