@@ -1,6 +1,6 @@
 {
   "name": "all4sale",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "All4Sale is a simple NodeJS e-commerce website for people promoting garage sale or wanting to make some extra money",
   "main": "index.js",
   "scripts": {
@@ -29,10 +29,10 @@
     "numeral": "^1.5.3",
     "pug": "^2.0.0-beta3",
     "sharp": "^0.16.2",
-    "sitemap": "^1.8.1"
+    "sitemap": "^1.8.1",
+    "errorhandler": "^1.5.0",
   },
   "devDependencies": {
-    "errorhandler": "^1.5.0",
     "nodemon": "^1.9.2"
   }
 }
