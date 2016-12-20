@@ -1,0 +1,41 @@
+extend layout
+include mail-form
+
+block js
+    script(type="text/javascript", src="/public/js/product.js?v=2")
+
+block content
+    - var product_slug = product.slug
+
+    div.row
+        div.col-xs-12
+            div.bs-callout.bs-callout-info
+                if product.sold
+                    h2 #[s #{product.name}] (#{helpers.conditionFormat(product.condition)}) 
+                    h3: s #{product.price}
+                else
+                    h3 #{product.price}
+                    h2 #{product.name}
+                span.label(class=helpers.conditionFormat(product.condition)) #{helpers.condition(product.condition)}
+
+                p.text #{product.description}
+
+    if !product.sold
+        div.row
+            div.col-xs-12
+                a.btn.btn-success(href="#buy") #{messages.product.buyButton}
+    if product.images && product.images.length > 0
+        div.row
+            div.col-xs-12.col-md-6
+                !=helpers.image(product.mainImage, { width: 555, height: 555, id: "main-image", alt: product.name, class: "img-rounded img-responsive img-raised", crop: "fill" })
+            div.col-xs-12.col-md-6
+                each image in product.images
+                    div#images
+                        a(href="#")
+                            - var mainImageUrl = helpers.imageUrl(image, { width: 555, height: 555, id: "main-image", alt: product.name, class: "img-responsive", crop: "fill" })
+                            !=helpers.image(image, { width: 165, height: 165, alt: product.name, class: "img-rounded img-responsive img-raised", crop: "fill", "data-src-large": mainImageUrl })
+        hr
+    if !product.sold
+        div.row
+            div.col-xs-6
+                +mail_form(product)

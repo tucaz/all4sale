@@ -1,0 +1,53 @@
+mixin mail_form(product)
+    div.alert.alert-success(style="display: none;", id="success-message")
+        div.container
+            strong #{messages.contactForm.successMessage}
+
+    form.form-horizontal(id="buy")
+        input(type="hidden",value=product.slug, id="product")
+        fieldset
+            h3 #{legend}
+
+        p #{messages.contactForm.formInstructions}
+
+        div.form-group
+            label.control-label.col-xs-4 #{messages.contactForm.nameField} (*):
+            div.col-xs-8
+                div.input-group
+                    span.input-group-addon
+                        i.glyphicon.glyphicon-user
+                    input.form-control(type="text", required=required, placeholder=messages.contactForm.nameFieldPlaceholder, pattern="^([a-zA-Z0-9)$", id="name")
+
+        div.form-group
+            label.control-label.col-xs-4 #{messages.contactForm.emailField} (*):
+            div.col-xs-8
+                div.input-group
+                    span.input-group-addon
+                        i.glyphicon.glyphicon-envelope
+                    input.form-control(type="email", required=required, placeholder=messages.contactForm.emailFieldPlaceholder, id="email")
+
+        div.form-group
+            label.control-label.col-xs-4 #{messages.contactForm.phoneField}:
+            div.col-xs-8
+                div.input-group
+                    span.input-group-addon
+                        i.glyphicon.glyphicon-earphone
+                    input.form-control(type="text", placeholder=messages.contactForm.phoneFieldPlaceholder, id="phone")
+
+        div.form-group
+            label.control-label.col-xs-4 #{messages.contactForm.cityField}:
+            div.col-xs-8
+                div.input-group
+                    span.input-group-addon
+                        i.glyphicon.glyphicon-home
+                    input.form-control(type="text", placeholder=messages.contactForm.cityFieldPlaceholder, id="city")
+
+        div.form-group
+            label.control-label.col-xs-4 #{messages.contactForm.messageField}:
+            div.col-xs-8
+                textarea.form-control(id="message", rows=5)
+
+        div.form-group
+            label.control-label.col-xs-4
+            div.col-xs-4
+                button.btn.btn-success(type="submit") #{messages.contactForm.sendButton}

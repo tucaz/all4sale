@@ -1,0 +1,21 @@
+{
+  "name": "all4sale",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "tucaz"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "material-kit": "^1.1.0"
+  }
+}

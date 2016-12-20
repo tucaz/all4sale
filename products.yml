@@ -1,0 +1,19 @@
+    - name: Battlefield Black Ops
+      description: | 
+        Jogo battlefield para XBOX 360
+        Muito novo e quase nunca usado
+        Ainda na caixa
+      price: 70.50
+      categories:
+        - XBOX
+        - Jogos
+      imagesFolder: bf
+      condition: AlmostNew
+    - name: GTA IV
+      description: Jogo GTA para XBOX 360
+      price: 80.50
+      categories:
+        - XBOX
+        - Jogos
+      imagesFolder: gta
+      condition: Used

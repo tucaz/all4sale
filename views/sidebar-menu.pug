@@ -1,0 +1,49 @@
+- 
+    var facetKeys = Object.keys(facets)
+    var showFilters = facetKeys.some(function(key){
+        var facet = facets[key];
+        return Object.keys(facet.values).length > 0;
+    });
+
+    var showSelectedFilters = facetKeys.some(function(key){
+        var facet = facets[key];
+        return Object.keys(facet.selectedValues).length > 0;
+    });
+
+if showSelectedFilters
+    h5 #{messages.sidebar.selectedFiltersText}
+
+    each facetKey in facetKeys
+        - var facet = facets[facetKey]
+        - var selectedFacetValues = Object.keys(facet.selectedValues).sort() 
+        if selectedFacetValues.length > 0
+            h6 #{facet.text}
+            ul
+                each valueKey in selectedFacetValues
+                    - var facetValue = facet.selectedValues[valueKey];
+                    if Array.isArray(value)
+                        each value in facetValue
+                            li
+                            a.text-info(href="/" + facetValue.unselectPath) #{facetValue.text}
+                                span.glyphicon.glyphicon-remove-circle.pull-right
+                    else
+                        li
+                            a.text-info(href="/" + facetValue.unselectPath) #{facetValue.text}
+                                span.glyphicon.glyphicon-remove-circle.pull-right
+    hr
+
+if showFilters
+    h5 #{messages.sidebar.filtersAvailableText}
+
+    each facetKey in facetKeys
+        - var facet = facets[facetKey]
+        - var facetValues = Object.keys(facet.values).sort()
+        if facetValues.length > 0 
+            h6 #{facet.text}
+            ul
+                each valueKey in facetValues
+                    - var value = facet.values[valueKey];
+                    li
+                        a.text-info(href="/" + value.selectPath) #{value.text} 
+                            span.badge.pull-right #{value.count}
+    hr

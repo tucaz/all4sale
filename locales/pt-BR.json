@@ -1,0 +1,55 @@
+{
+    "global": {
+        "sitename": "All4Sale",
+        "menu": {
+            "home": "Home",
+            "about": "Sobre"
+        },
+        "productStatus": {
+            "available": "Disponível",
+            "sold": "Vendido"
+        },
+        "productCondition": {
+            "New": "Novo",
+            "AlmostNew": "Semi-novo",
+            "Used": "Usado"
+        },
+        "facets": {
+            "condition": "Condição",
+            "category": "Categoria",
+            "availability": "Disponibilidade"
+        }
+    },
+    "sidebar": {
+        "selectedFiltersText": "Filtros selecionados",
+        "filtersAvailableText": "Filtrar"
+    },
+    "home": {
+        "title": "%{sitename}",
+        "productCount": "%{count} produto encontrado |||| %{count} produtos encontrados"
+    },
+    "about": {
+        "title": "%{sitename} - Sobre",
+        "headerText": "Sobre",
+        "bodyText": "All4Sale é um simples e-commerce desenvolvido em NodeJS para pessoas que estejam oferecendo produtos para venda situações de mudança (família vende tudo) ou apenas para ganhar um $$$ extra."
+    },
+    "product": {
+        "title": "%{sitename} - %{product.name}",
+        "buyButton": "Comprar"
+    },
+    "contactForm": {
+        "formLegend": "Comprar",
+        "formInstructions": "Preencha os dados abaixo e clique em enviar que entraremos em contato.\r\nCaso o produto não seja retirado em mãos (São Paulo) o frete é por conta do comprador.",
+        "nameField": "Seu nome:",
+        "nameFieldPlaceholder": "Seu nome",
+        "emailField": "Seu email:",
+        "emailFieldPlaceholder": "Seu email",
+        "phoneField": "Telefone / WhatsApp:",
+        "phoneFieldPlaceholder": "(99) 9999-9999",
+        "cityField": "Cidade:",
+        "cityFieldPlaceholder": "Cidade",
+        "messageField": "Mensagem",
+        "sendButton": "Enviar",
+        "successMessage": "Obrigado por entrar em contato. Retornaremos o mais rápido possível!"
+    }
+}

@@ -1,0 +1,55 @@
+{
+    "global": {
+        "sitename": "All4Sale",
+        "menu": {
+            "home": "Home",
+            "about": "About"
+        },
+        "productStatus": {
+            "available": "Available",
+            "sold": "Sold"
+        },
+        "productCondition": {
+            "New": "New",
+            "AlmostNew": "Mint",
+            "Used": "Used"
+        },
+        "facets": {
+            "condition": "Condition",
+            "category": "Category",
+            "availability": "Availability"
+        }
+    },
+    "sidebar": {
+        "selectedFiltersText": "Filters applied",
+        "filtersAvailableText": "Filter"
+    },
+    "home": {
+        "title": "%{sitename}",
+        "productCount": "%{count} product found |||| %{count} products found"
+    },
+    "about": {
+        "title": "%{sitename} - About",
+        "headerText": "About",
+        "bodyText": "All4Sale is a simple NodeJS e-commerce website for people promoting garage sale or wanting to make some extra money."
+    },
+    "product": {
+        "title": "%{sitename} - %{productName}",
+        "buyButton": "Buy"
+    },
+    "contactForm": {
+        "formLegend": "Buy",
+        "formInstructions": "Fill the form below and hit send and we'll get in touch with you.\r\nShipping fee's are buyer's responsibility.",
+        "nameField": "Name:",
+        "nameFieldPlaceholder": "Name",
+        "emailField": "Email:",
+        "emailFieldPlaceholder": "Email",
+        "phoneField": "Phone:",
+        "phoneFieldPlaceholder": "(999) 999-9999",
+        "cityField": "City:",
+        "cityFieldPlaceholder": "City",
+        "messageField": "Message",
+        "sendButton": "Send",
+        "successMessage": "Thanks for getting in touch. We'll get back to you as soon as possible!"
+    }
+}

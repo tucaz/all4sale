@@ -1,0 +1,75 @@
+body {
+    padding-top: 150px;
+}
+
+.text {
+    white-space: pre-line;
+}
+
+.label {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.container {
+    padding-top: 10px;
+}
+
+.sold-image {
+    position: relative;
+}
+
+@media screen and (max-width: 767px) {
+    .sold-text {
+        font-size: 6.8em;
+        top: 50%;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .sold-text {
+        font-size: 6.5em;
+        top: 25%;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .sold-text {
+        font-size: 3.5em;
+        top: 50%;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .sold-text {
+        font-size: 4.4em;
+        top: 50%;
+    }
+}
+
+.sold-text {
+    position: absolute;
+    color: #ab1818;
+    width: 100%;
+    transform: rotate(-45deg);
+    text-shadow: 0 0 10px #000;
+}
+
+.product a {
+    text-decoration: none;
+    color: #333;
+}
+
+#images {
+    float: left;
+    margin: 0 10px 10px;
+}
+
+ul {
+    padding: 0; 
+}
+
+li {
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}

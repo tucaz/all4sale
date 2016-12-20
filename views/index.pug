@@ -1,0 +1,24 @@
+extend layout
+
+block content
+    div.row
+        div.col-xs-12.col-md-2
+           include sidebar-menu
+        div.col-xs-12.col-md-10
+            h4 #{messages.home.productCount}
+            each result in results
+                if result.category
+                    h2 #{result.category}
+                
+                each row in result.rows
+                    div.row
+                        each product in row
+                            div.col-xs-12.col-md-3.product
+                                a(href="/products/" + product.slug)
+                                    div.sold-image
+                                        !=helpers.image(product.mainImage, { width: 415, alt: product.name, class: "img-rounded img-responsive img-raised", crop: "fill" })
+                                        if product.sold
+                                            p.sold-text Vendido
+                                    h3 #{product.name}
+                                    h4 #{product.price}
+                                    span.label(class=helpers.conditionFormat(product.condition)) #{helpers.condition(product.condition)}
