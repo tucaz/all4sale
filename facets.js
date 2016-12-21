@@ -23,7 +23,7 @@ module.exports = function (facetTranslator, customFacets) {
         if(customFacets) {
             Object.keys(customFacets).forEach(facetKey => {
                 if(!facets[facetKey]) {
-                    facets[facetKey] = new Facet(facetKey, false, facetKey, null);
+                    facets[facetKey] = new Facet(facetKey, false, facetTranslator.getDescription(facetKey), null);
                 } else {
                     console.log(`WARN: Can't override standard facet ${facetKey}`);
                 }

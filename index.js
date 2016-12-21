@@ -32,7 +32,7 @@ module.exports = function (options) {
     _.extend(config, options);
 
     let products = new Products(config.products, config.productImagesFolder);
-    let defaultLocales = locale.loadDefaults(config.localesPath)
+    let defaultLocales = locale.loadDefaults(config.localesPath, config.l18n);
     let locales = locale.filterAvailable(defaultLocales, config.availableLocales);
 
     app.use(localeMiddleware(locales, config.defaultLocale));

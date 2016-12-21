@@ -5,7 +5,7 @@ module.exports = new(function(){
             _ = require('lodash'),
             Polyglot = require('node-polyglot');
 
-    this.loadDefaults = function(localePath) {
+    this.loadDefaults = function(localePath, customLocale) {
         let files = glob.sync(localePath);
         let r = {};
         
@@ -13,6 +13,7 @@ module.exports = new(function(){
             let locale = path.basename(file, '.json');
             let content = fs.readFileSync(file);
             content = JSON.parse(content);
+            content = mergeCustom(content, locale, customLocale);
             
             r[locale] = new Polyglot({locale, phrases: content});
         });
@@ -29,5 +30,12 @@ module.exports = new(function(){
         });
 
         return r;
+    }
+
+    function mergeCustom(content, locale, customLocale) {
+        if(customLocale[locale]) {
+            _.merge(content, customLocale[locale]);
+        }
+        return content;
     }
 })
