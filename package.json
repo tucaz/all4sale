@@ -1,6 +1,6 @@
 {
   "name": "all4sale",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "All4Sale is a simple NodeJS e-commerce website for people promoting garage sale or wanting to make some extra money",
   "main": "index.js",
   "scripts": {
